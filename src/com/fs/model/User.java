@@ -1,7 +1,6 @@
 package com.fs.model;
 
 import java.io.Serializable;
-import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,6 +11,8 @@ import javax.persistence.Table;
 @Table(name = "User_Master")
 public class User implements Serializable{
 
+	private static final long serialVersionUID = 1254759596912679164L;
+	
 	@Id
     @Column(name = "Id")
     private Integer id;

@@ -1,5 +1,5 @@
 package com.fs.service;
 
 public interface ILoginService {
-	boolean validateUser();
+	boolean validateUser(String loginId, String password);
 }

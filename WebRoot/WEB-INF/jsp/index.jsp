@@ -72,27 +72,11 @@ table,th, td
   
 </style>
 <script type="text/javascript" language="javascript">
-
-function validateForm(form) {alert()
-	var userName = form.userName.value;
-	var password = form.password.value;
-	if(userName == null || userName.trim() == "" ) {
-      alert("Error: Username cannot be blank!");
-      form.username.focus();
-      return false;
-    } else if(password == null || password.trim() == "") {
-      alert("Error: Username cannot be blank!");
-      form.password.focus();
-      return false;
-    }
-    retunr true;
-}
-
 </script>
 </head>
 
 <body bgcolor="#f6f8f9">
-    <form method="POST" action="login.do" id="form1" onsubmit="return javascript:validateForm(this);">
+    <form method="post" action="login" id="form1" >
 
     <div id="page">
         <div id="container">
@@ -134,7 +118,7 @@ function validateForm(form) {alert()
                                         <span id="Label2" class="eaclabel">Login</span>
                                     </td>
                                     <td align="right">
-                                        <input type="text" name="userName" id="userName" class="eactext" style="width:150px;">
+                                        <input type="text" name="txt_username" id="txt_username" class="eactext" style="width:150px;">
                                     </td>
                                 </tr>
                                 <tr>
@@ -142,7 +126,7 @@ function validateForm(form) {alert()
                                         <span id="Label1" class="eaclabel">Password</span>
                                     </td>
                                     <td align="right">
-                                        <input type="password" name="password" id="password" class="eactext" style="width:150px;">
+                                        <input type="password" name="txt_password" id="txt_password" class="eactext" style="width:150px;">
                                     </td>
                                 </tr>
                                 <tr>
@@ -154,7 +138,7 @@ function validateForm(form) {alert()
                                         <table width="100%" cellpadding="0" cellspacing="0">
                                             <tbody><tr>                                                                                                
                                                 <td align="right">
-                                                    <input type="submit" name="btnLogin" value="Login" id="btnLogin" class="buttoncss" style="width:50px;"/></td>
+                                                    <input type="submit" name="btnLogin" value="Login" onclick="javascript:return Validate();" id="btnLogin" class="buttoncss" style="width:50px;"></td>
                                             </tr>
                                         </tbody></table>
                                     </td>
